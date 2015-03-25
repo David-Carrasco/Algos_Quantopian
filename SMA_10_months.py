@@ -21,10 +21,6 @@ def sma_month_calculation(context, data):
     last_sma10 = sma_previous_month(price_SPY,
                                     context.SMA_monthly_period,
                                     1)
-    #SMA 10 before previous month
-    before_last_sma10 = sma_previous_month(price_SPY,
-                                           context.SMA_monthly_period,
-                                           2)
 
     if (price_SPY.iloc[-1][0] >= last_sma10[0]):
         #Bullish
